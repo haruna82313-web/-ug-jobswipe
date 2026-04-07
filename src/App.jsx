@@ -7,50 +7,34 @@ const styles = {
   loginWrapper: { boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', textAlign: 'center', maxWidth: '350px', width: '100%' },
   heroLogo: { fontSize: '3rem', marginBottom: '10px' },
   heroTitle: { fontSize: '1.8rem', fontWeight: 'bold', color: '#10b981', marginBottom: '10px' },
-  header: { boxSizing: 'border-box', width: '100%', maxWidth: '400px', padding: '20px 0' },
-  logo: { color: '#10b981', textAlign: 'center', fontSize: '1.6rem', fontWeight: '800', letterSpacing: '-0.025em', marginBottom: '5px' },
-  
-  // New Pulsing Tip Style
-  refreshTip: { fontSize: '0.75rem', color: '#94a3b8', textAlign: 'center', marginBottom: '15px', fontWeight: '600', width: '100%' },
-
+  header: { boxSizing: 'border-box', width: '100%', maxWidth: '400px', padding: '20px 0 25px 0' }, 
+  logo: { color: '#10b981', textAlign: 'center', fontSize: '1.8rem', fontWeight: '800', letterSpacing: '-0.025em', marginBottom: '15px' }, 
+  refreshBtnWrapper: { width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '20px' },
+  refreshBtn: { background: '#1e293b', color: '#94a3b8', border: '1px solid #334155', padding: '10px 20px', borderRadius: '30px', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' },
   tabContainer: { display: 'flex', gap: '8px', width: '100%' },
   mainContent: { boxSizing: 'border-box', width: '100%', maxWidth: '400px' },
   dropdown: { boxSizing: 'border-box', width: '100%', padding: '14px', background: '#0f172a', color: 'white', borderRadius: '12px', border: '1px solid #1e293b', marginBottom: '10px', fontSize: '0.9rem' },
   searchBar: { boxSizing: 'border-box', width: '100%', padding: '14px', background: '#0f172a', color: 'white', borderRadius: '12px', border: '1px solid #1e293b', marginBottom: '15px', outline: 'none', fontSize: '0.9rem' },
-  
-  card: { 
-    boxSizing: 'border-box', 
-    background: 'linear-gradient(145deg, #0f172a, #1e293b)', 
-    padding: '24px', 
-    borderRadius: '28px', 
-    position: 'relative', 
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column'
-  },
+  card: { boxSizing: 'border-box', background: 'linear-gradient(145deg, #0f172a, #1e293b)', padding: '24px', borderRadius: '28px', position: 'relative', width: '100%', display: 'flex', flexDirection: 'column' },
   cardTopRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', width: '100%' },
   cardTitle: { fontSize: '1.6rem', fontWeight: '700', margin: '0', textAlign: 'center', color: '#f8fafc', width: '100%' },
   cardPay: { fontSize: '1.2rem', fontWeight: '700', color: '#fbbf24', margin: '5px 0 15px 0', textAlign: 'center', width: '100%' },
   descBox: { background: 'rgba(255,255,255,0.04)', padding: '16px', borderRadius: '16px', marginBottom: '20px', border: '1px solid rgba(255,255,255,0.03)' },
   descText: { fontSize: '0.95rem', color: '#94a3b8', margin: 0, lineHeight: '1.5' },
   badge: { backgroundColor: 'rgba(16,185,129,0.15)', color: '#34d399', padding: '6px 12px', borderRadius: '30px', fontSize: '0.7rem', fontWeight: '700', textTransform: 'uppercase' },
-  
   buttonRow: { display: 'flex', gap: '10px', width: '100%', marginBottom: '10px' },
   actionBtn: { flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '14px', borderRadius: '12px', textDecoration: 'none', fontWeight: '700', fontSize: '0.9rem', textAlign: 'center' },
-  
   infoText: { marginTop: '10px', fontSize: '0.7rem', color: '#475569', textAlign: 'center', width: '100%' },
   reportBtn: { background: 'none', border: 'none', color: '#f87171', fontSize: '0.85rem', fontWeight: '600', cursor: 'pointer', opacity: 0.8, padding: '8px' },
-  
   form: { boxSizing: 'border-box', width: '100%', display: 'flex', flexDirection: 'column', gap: '12px', background: '#0f172a', padding: '24px', borderRadius: '24px', border: '1px solid #1e293b' },
   input: { boxSizing: 'border-box', width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid #1e293b', backgroundColor: '#020617', color: 'white', fontSize: '1rem' },
-  
   passwordContainer: { position: 'relative', width: '100%' },
   eyeIcon: { position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)', cursor: 'pointer', color: '#94a3b8', fontSize: '1.2rem', background: 'none', border: 'none', display: 'flex', alignItems: 'center' },
-  
   submitBtn: { padding: '18px', borderRadius: '14px', background: '#10b981', color: 'white', border: 'none', fontWeight: '800', fontSize: '1.1rem', cursor: 'pointer' },
   toast: { position: 'fixed', bottom: '30px', left: '50%', transform: 'translateX(-50%)', padding: '16px 32px', borderRadius: '16px', color: 'white', fontWeight: '700', zIndex: 9999, boxShadow: '0 10px 30px rgba(0,0,0,0.5)', width: 'max-content' },
   termsBox: { background: '#0f172a', padding: '30px', borderRadius: '28px', border: '1px solid #1e293b', textAlign: 'left', maxWidth: '400px', width: '100%' },
-  termsText: { fontSize: '0.9rem', color: '#94a3b8', lineHeight: '1.7', marginBottom: '25px' }
+  termsText: { fontSize: '0.9rem', color: '#94a3b8', lineHeight: '1.7', marginBottom: '25px' },
+  supportEmail: { color: '#94a3b8', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', textAlign: 'center', width: '100%', display: 'block', marginTop: '30px' }
 };
 
 export default function App() {
@@ -101,16 +85,25 @@ export default function App() {
 
   const handleAgree = () => { localStorage.setItem('ug_terms_agreed', 'true'); setHasAgreed(true); };
   const showToast = (message, color) => { setToast({ visible: true, message, color }); setTimeout(() => setToast({ visible: false, message: "", color: "" }), 3000); };
+  const handleRefresh = () => { window.location.reload(); };
 
   const updateHeartbeat = async (id, table) => {
     const { error } = await supabase.from(table).update({ created_at: new Date().toISOString(), status: 'active' }).eq('id', id);
-    if (!error) showToast("✅ Post Bumped!", "#10b981");
+    if (!error) {
+        showToast("✅ Post Bumped!", "#10b981");
+        if(table === 'jobs') setJobs(prev => [prev.find(i => i.id === id), ...prev.filter(i => i.id !== id)]);
+        if(table === 'workers') setWorkers(prev => [prev.find(i => i.id === id), ...prev.filter(i => i.id !== id)]);
+    }
   };
 
   const toggleStatus = async (id, table, currentStatus) => {
     const newStatus = currentStatus === 'active' ? 'taken' : 'active';
     const { error } = await supabase.from(table).update({ status: newStatus }).eq('id', id);
-    if (!error) showToast(`✅ Status: ${newStatus.toUpperCase()}`, "#334155");
+    if (!error) {
+        showToast(`✅ Status: ${newStatus.toUpperCase()}`, "#334155");
+        if(table === 'jobs') setJobs(prev => prev.map(j => j.id === id ? {...j, status: newStatus} : j));
+        if(table === 'workers') setWorkers(prev => prev.map(w => w.id === id ? {...w, status: newStatus} : w));
+    }
   };
 
   const handleAuth = async (e) => {
@@ -139,8 +132,9 @@ export default function App() {
     if(!/^\d{10}$/.test(phone)) { setLoading(false); return showToast("❌ Phone must be 10 digits", "#ef4444"); }
     const newJob = { title: e.target.title.value, pay: e.target.pay.value, region: e.target.region.value, category: e.target.category.value, phone: phone, description: e.target.description.value, user_id: user?.id, status: 'active' };
     try {
-        const { error } = await supabase.from('jobs').insert([newJob]);
+        const { data, error } = await supabase.from('jobs').insert([newJob]).select();
         if (error) throw error;
+        if (data) setJobs([data, ...jobs]); 
         e.target.reset(); showToast("✅ Job Posted!", "#10b981"); setView("find-work");
     } catch (err) { showToast("⚠️ Error: " + err.message, "#ef4444"); } finally { setLoading(false); }
   };
@@ -152,8 +146,9 @@ export default function App() {
     if(!/^\d{10}$/.test(phone)) { setLoading(false); return showToast("❌ Phone must be 10 digits", "#ef4444"); }
     const newWorker = { name: e.target.name.value, skill: e.target.skill.value, region: e.target.region.value, experience: e.target.exp.value, phone: phone, bio: e.target.bio.value, user_id: user?.id, status: 'active' };
     try {
-        const { error } = await supabase.from('workers').insert([newWorker]);
+        const { data, error } = await supabase.from('workers').insert([newWorker]).select();
         if (error) throw error;
+        if (data) setWorkers([data, ...workers]); 
         e.target.reset(); showToast("✅ Skill Listed!", "#f59e0b"); setView("find-talent");
     } catch (err) { showToast("⚠️ Error: " + err.message, "#ef4444"); } finally { setLoading(false); }
   };
@@ -161,12 +156,17 @@ export default function App() {
   const deleteItem = async (id, table) => {
     if(!window.confirm("🗑️ Delete this post permanently?")) return;
     const { error } = await supabase.from(table).delete().eq('id', id);
-    if (!error) { showToast("Post Removed", "#ef4444"); }
+    if (!error) { 
+        showToast("Post Removed", "#ef4444"); 
+        if(table === 'jobs') setJobs(jobs.filter(j => j.id !== id));
+        if(table === 'workers') setWorkers(workers.filter(w => w.id !== id));
+    }
   };
 
   const getWaLink = (num) => {
+    // Standard direct WhatsApp app protocol
     const cleanNum = num.replace(/^0/, '256').replace(/^\+/, '');
-    return `whatsapp://send?phone=${cleanNum}`;
+    return `whatsapp://send?phone=${cleanNum}`; 
   };
 
   const filteredJobs = jobs.filter(j => (regionFilter === "All" || j.region === regionFilter) && (j.title?.toLowerCase().includes(searchTerm.toLowerCase())));
@@ -216,10 +216,10 @@ export default function App() {
       <style>{`
         @keyframes heartbeat {
           0% { transform: scale(1); opacity: 0.8; }
-          50% { transform: scale(1.05); opacity: 1; color: #10b981; }
+          50% { transform: scale(1.03); opacity: 1; color: #10b981; }
           100% { transform: scale(1); opacity: 0.8; }
         }
-        .pulse-tip { animation: heartbeat 2s infinite ease-in-out; }
+        .pulse-support { animation: heartbeat 2s infinite ease-in-out; }
         .nav-btn { box-sizing: border-box; font-size: 0.8rem; padding: 10px; border-radius: 10px; border: 1px solid #1e293b; background: #0f172a; color: #94a3b8; cursor: pointer; flex: 1; } 
         .nav-btn.active { background: #10b981; color: white; border: none; font-weight: bold; }
         .swipe-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 20px; width: 100%; scrollbar-width: none; padding: 10px 0; }
@@ -233,8 +233,8 @@ export default function App() {
       
       <header style={styles.header}>
         <h1 style={styles.logo}>UG JobSwipe 🇺🇬</h1>
-        <div style={styles.refreshTip} className="pulse-tip">
-          TIP: Refresh The Page Per Every Post You Make To See Your Post
+        <div style={styles.refreshBtnWrapper}>
+          <button onClick={handleRefresh} style={styles.refreshBtn}>🔄 Refresh to view new posts</button>
         </div>
         <div style={styles.tabContainer}>
           <button onClick={() => setView("find-work")} className={`nav-btn ${view === "find-work" ? "active" : ""}`}>Find Work</button>
@@ -345,7 +345,7 @@ export default function App() {
               <option value="">Region</option><option>Central</option><option>Northern</option><option>Western</option><option>Eastern</option>
             </select>
             <textarea name="description" placeholder="Requirements..." required style={{...styles.input, minHeight: '80px'}} />
-            <input name="phone" type="tel" placeholder="Phone Number" pattern="\d{10}" required style={styles.input} />
+            <input name="phone" type="text" maxLength="10" placeholder="Phone Number (10 digits)" pattern="\d{10}" required style={styles.input} title="Phone must be exactly 10 digits" />
             <button type="submit" disabled={loading} style={{...styles.submitBtn, opacity: loading ? 0.6 : 1}}>{loading ? "Posting..." : "Post Job Now"}</button>
           </form>
         )}
@@ -360,12 +360,18 @@ export default function App() {
               <option value="">Region</option><option>Central</option><option>Northern</option><option>Western</option><option>Eastern</option>
             </select>
             <textarea name="bio" placeholder="Why hire you?" required style={{...styles.input, minHeight: '80px'}} />
-            <input name="phone" type="tel" placeholder="Phone Number" pattern="\d{10}" required style={styles.input} />
+            <input name="phone" type="text" maxLength="10" placeholder="Phone Number (10 digits)" pattern="\d{10}" required style={styles.input} title="Phone must be exactly 10 digits" />
             <button type="submit" disabled={loading} style={{...styles.submitBtn, background: '#f59e0b', opacity: loading ? 0.6 : 1}}>{loading ? "Listing..." : "List My Profile"}</button>
           </form>
         )}
 
-        <button onClick={handleLogout} style={{marginTop: '40px', background: 'none', border: 'none', color: '#475569', cursor: 'pointer', width: '100%', marginBottom: '30px'}}>Sign Out Account</button>
+        <a href="mailto:ugjobswipe333@gmail.com" style={styles.supportEmail} className="pulse-support">
+          📩 Inquiries: ugjobswipe333@gmail.com
+        </a>
+
+        <button onClick={handleLogout} style={{marginTop: '20px', background: 'none', border: 'none', color: '#475569', cursor: 'pointer', width: '100%', marginBottom: '30px'}}>
+          Sign Out Account
+        </button>
       </main>
     </div>
   );
