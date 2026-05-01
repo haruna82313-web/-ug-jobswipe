@@ -145,7 +145,11 @@ export default function App() {
       } else {
         const { error } = await supabase.auth.signUp({ email, password });
         if (error) throw error;
-        showToast("Check email to confirm!", "#10b981");
+        showToast("✅ Account created! Logging you in...", "#10b981");
+        
+        // Since email confirmation is off, we can try to sign them in immediately
+        // or just let them click login. Better UX: switch to login mode.
+        setIsLoginMode(true);
       }
     } catch (err) { showToast(err.message, "#ef4444"); } finally { setLoading(false); }
   };
