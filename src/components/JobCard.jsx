@@ -4,8 +4,12 @@ import { timeAgo, getWaLink } from '../utils/helpers';
 const styles = {
   card: { boxSizing: 'border-box', background: 'linear-gradient(145deg, #0f172a, #1e293b)', padding: '24px', borderRadius: '28px', position: 'relative', width: '100%', display: 'flex', flexDirection: 'column' },
   cardTopRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', width: '100%' },
-  cardTitle: { fontSize: '1.6rem', fontWeight: '700', margin: '0', textAlign: 'center', color: '#f8fafc', width: '100%' },
-  cardPay: { fontSize: '1.2rem', fontWeight: '700', color: '#fbbf24', margin: '5px 0 15px 0', textAlign: 'center', width: '100%' },
+  profileRow: { display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px', width: '100%' },
+  profilePic: { width: '50px', height: '50px', borderRadius: '14px', objectFit: 'cover', border: '2px solid rgba(16, 185, 129, 0.3)' },
+  verifiedBadge: { background: 'linear-gradient(to right, #000, #fadc05, #de0707)', color: 'white', padding: '4px 10px', borderRadius: '8px', fontSize: '0.65rem', fontWeight: '900', letterSpacing: '0.05em' },
+  cardTitle: { fontSize: '1.5rem', fontWeight: '700', margin: '0', color: '#f8fafc' },
+  cardPay: { fontSize: '1.2rem', fontWeight: '700', color: '#fbbf24', margin: '5px 0' },
+  landmark: { fontSize: '0.8rem', color: '#10b981', fontWeight: '600', marginBottom: '15px' },
   descBox: { background: 'rgba(255,255,255,0.04)', padding: '16px', borderRadius: '16px', marginBottom: '20px', border: '1px solid rgba(255,255,255,0.03)' },
   descText: { fontSize: '0.95rem', color: '#94a3b8', margin: 0, lineHeight: '1.5' },
   badge: { backgroundColor: 'rgba(16,185,129,0.15)', color: '#34d399', padding: '6px 12px', borderRadius: '30px', fontSize: '0.7rem', fontWeight: '700', textTransform: 'uppercase' },
@@ -26,6 +30,7 @@ const JobCard = ({ job, user, updateHeartbeat, toggleStatus, deleteItem, logInte
           <p style={{ margin: '5px 0 0 0', fontWeight: '500', fontSize: '0.75rem' }}>Send to 0752333216 then wait for approval.</p>
         </div>
       )}
+      
       <div style={styles.cardTopRow}>
         <span style={styles.badge}>{job.category}</span>
         {!isPending && (
@@ -34,8 +39,19 @@ const JobCard = ({ job, user, updateHeartbeat, toggleStatus, deleteItem, logInte
           </span>
         )}
       </div>
+
+      <div style={styles.profileRow}>
+        <img src={job.profile_photo || "https://via.placeholder.com/50"} style={styles.profilePic} alt="Employer" />
+        <div>
+          <div style={styles.verifiedBadge}>🇺🇬 NIN VERIFIED</div>
+          <div style={{ fontSize: '0.75rem', color: '#64748b', marginTop: '4px' }}>Employer ID: {job.user_id?.slice(0, 8)}</div>
+        </div>
+      </div>
+
       <h2 style={styles.cardTitle}>{job.title}</h2>
-      <p style={{ ...styles.cardPay, opacity: job.status === 'taken' || isPending ? 0.3 : 1 }}>{job.pay}</p>
+      <p style={{ ...styles.cardPay, opacity: job.status === 'taken' || isPending ? 0.3 : 1 }}>{job.pay} UGX</p>
+      <div style={styles.landmark}>📍 {job.landmark}, {job.region}</div>
+
       <div style={styles.descBox}><p style={styles.descText}>{job.description}</p></div>
       
       {!isPending && job.status === 'active' && (
